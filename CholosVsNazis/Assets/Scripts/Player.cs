@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private Rigidbody2D Rigidbody2D;
+    private Animator animator;
     private float Horizontal;
     private bool Grounded;
 
@@ -15,13 +16,15 @@ public class Player : MonoBehaviour
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>(); 
     }
 
     
     void Update()
     {
         Horizontal = Input.GetAxisRaw("Horizontal");
-
+        animator.SetFloat("Horizontal", Mathf.Abs(Horizontal));
+        
         Debug.DrawRay(transform.position, Vector3.down * 1.5f, Color.red);
         if (Physics2D.Raycast(transform.position, Vector3.down, 1.5f))
         {
@@ -38,6 +41,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         Rigidbody2D.velocity = new Vector2(Horizontal * Speed, Rigidbody2D.velocity.y);
+
     }
 
     private void Jump()
