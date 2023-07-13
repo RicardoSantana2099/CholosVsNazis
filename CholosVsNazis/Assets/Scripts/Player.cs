@@ -22,8 +22,8 @@ public class Player : MonoBehaviour
     {
         Horizontal = Input.GetAxisRaw("Horizontal");
 
-        Debug.DrawRay(transform.position, Vector3.down * 1f, Color.red);
-        if (Physics2D.Raycast(transform.position, Vector3.down, 1f))
+        Debug.DrawRay(transform.position, Vector3.down * 1.5f, Color.red);
+        if (Physics2D.Raycast(transform.position, Vector3.down, 1.5f))
         {
             Grounded = true;
         }
