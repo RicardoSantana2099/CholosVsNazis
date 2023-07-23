@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 00ee68723da427e41b4bae03146b3e2b
+guid: 8d130e3a79124f04dbf5de2ff69f94ac
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: movimiento-EjeX_0
+      name: CleanUpHector_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 1
-        width: 28
-        height: 33
+        x: 145
+        y: 31
+        width: 683
+        height: 729
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afc62a517e43a114883500f6076809ca
-      internalID: -1532391051
+      spriteID: fcda0b87c8ca3c44b9b11e4e985c06ef
+      internalID: -1901863439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: movimiento-EjeX_1
+      name: CleanUpHector_1
       rect:
         serializedVersion: 2
-        x: 53
-        y: 1
-        width: 26
-        height: 33
+        x: 957
+        y: 46
+        width: 477
+        height: 699
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f7fade4d78425a43b3ef8f42e0b5e8a
-      internalID: 910786187
+      spriteID: 325e2aee82832c341b6204a139582156
+      internalID: 781169401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: movimiento-EjeX_2
+      name: CleanUpHector_2
       rect:
         serializedVersion: 2
-        x: 90
-        y: 1
-        width: 29
-        height: 31
+        x: 1606
+        y: 43
+        width: 597
+        height: 739
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,8 +173,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bf5a0168efbb16449188dc01d3346a5
-      internalID: -1844099478
+      spriteID: f179d246373c4034ea592d5bc5d3abcd
+      internalID: 1028374698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CleanUpHector_3
+      rect:
+        serializedVersion: 2
+        x: 2317
+        y: 49
+        width: 634
+        height: 837
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b715233b2416a694bab2e2065e1e0f99
+      internalID: -87099985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CleanUpHector_4
+      rect:
+        serializedVersion: 2
+        x: 2951
+        y: 45
+        width: 806
+        height: 826
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461cd65f958651f41be58bccc77026ea
+      internalID: 1513383044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CleanUpHector_5
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 40
+        width: 705
+        height: 772
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c85112aa73f07bc44a6b050021cd381b
+      internalID: -840745443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CleanUpHector_6
+      rect:
+        serializedVersion: 2
+        x: 4705
+        y: 31
+        width: 640
+        height: 711
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d94ddae6ecce44ab23d0eea12dab8a
+      internalID: -541383033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CleanUpHector_7
+      rect:
+        serializedVersion: 2
+        x: 5453
+        y: 43
+        width: 704
+        height: 822
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66df59955d4824d46a591cbf3a141c42
+      internalID: -2086116378
       vertices: []
       indices: 
       edges: []
@@ -190,9 +295,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      movimiento-EjeX_0: -1532391051
-      movimiento-EjeX_1: 910786187
-      movimiento-EjeX_2: -1844099478
+      CleanUpHector_0: -1901863439
+      CleanUpHector_1: 781169401
+      CleanUpHector_2: 1028374698
+      CleanUpHector_3: -87099985
+      CleanUpHector_4: 1513383044
+      CleanUpHector_5: -840745443
+      CleanUpHector_6: -541383033
+      CleanUpHector_7: -2086116378
+      CleanUpHector_8: -1427144408
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

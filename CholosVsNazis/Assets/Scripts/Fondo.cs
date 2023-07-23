@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Fondo : MonoBehaviour
 {
-   [SerializeField] private Vector2 velocidadMovimiento;
+    private Vector2 velocidadMovimiento;
     private Vector2 offset;
 
     private Material material;
+    private Rigidbody2D jugadorRB;
 
 
     private void Awake()

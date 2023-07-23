@@ -23,10 +23,13 @@ public class Player : MonoBehaviour
     void Update()
     {
         Horizontal = Input.GetAxisRaw("Horizontal");
-        animator.SetFloat("Horizontal", Mathf.Abs(Horizontal));
+        animator.SetBool("isRunning", Horizontal != 0.0f);
+
+        if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+        else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
         
-        Debug.DrawRay(transform.position, Vector3.down * 1.5f, Color.red);
-        if (Physics2D.Raycast(transform.position, Vector3.down, 1.5f))
+        Debug.DrawRay(transform.position, Vector3.down * 2f, Color.red);
+        if (Physics2D.Raycast(transform.position, Vector3.down, 2f))
         {
             Grounded = true;
         }
