@@ -4,21 +4,26 @@ using UnityEngine;
 
 public class Fondo : MonoBehaviour
 {
-    private Vector2 velocidadMovimiento;
-    private Vector2 offset;
+    [SerializeField] private float parallaxMultiplier;
 
-    private Material material;
-    private Rigidbody2D jugadorRB;
+    private Transform cameraTransform;
+    private Vector3 previousCameraPosition;
+    
 
-
-    private void Awake()
+    private void Start()
     {
-        material = GetComponent<SpriteRenderer>().material;
+        cameraTransform = Camera.main.transform;
+        previousCameraPosition = cameraTransform.position;
+        
+       
     }
 
-    private void Update()
+    private void LateUpdate()
     {
-        offset = velocidadMovimiento * Time.deltaTime;
-        material.mainTextureOffset += offset;
+        float deltaX = (cameraTransform.position.x - previousCameraPosition.x) * parallaxMultiplier;
+        transform.Translate(new Vector3(deltaX, 0, 0));
+        previousCameraPosition = cameraTransform.position;
+
+     
     }
 }
