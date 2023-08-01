@@ -8,7 +8,10 @@ public class Player : MonoBehaviour
     private Animator animator;
     private float Horizontal;
     private bool Grounded;
+    private int Health = 30;
+    [SerializeField] private BarraDeVida barraDeVida;
 
+    public GameObject BulletPrefab;
     public float Jumpforce;
     public float Speed;
     
@@ -16,7 +19,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>(); 
+        animator = GetComponent<Animator>();
+        
     }
 
     
@@ -39,6 +43,8 @@ public class Player : MonoBehaviour
         {
             Jump();
         }
+
+       
     }
 
     private void FixedUpdate()
@@ -50,5 +56,11 @@ public class Player : MonoBehaviour
     private void Jump()
     {
         Rigidbody2D.AddForce(Vector2.up * Jumpforce);
+    }
+
+    public void Hit()
+    {
+        Health = Health - 1;
+        if (Health == 0) Destroy(gameObject); 
     }
 }

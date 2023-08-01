@@ -14,6 +14,7 @@ public class VillanoFollow : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         bool isPlayerRight = transform.position.x < player.transform.position.x;
         Flip(isPlayerRight);
+
     }
 
     private void Flip(bool isPlayerRight)
@@ -24,6 +25,15 @@ public class VillanoFollow : MonoBehaviour
             Vector3 scale = transform.localScale;
             scale.x *= -1;
             transform.localScale = scale;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Player Hector = collision.collider.GetComponent<Player>();
+        if(Hector != null)
+        {
+            Hector.Hit();
         }
     }
 }

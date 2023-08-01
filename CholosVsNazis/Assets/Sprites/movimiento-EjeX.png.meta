@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3710b44d85b637446ad053fd6fcbfb97
+guid: 00ee68723da427e41b4bae03146b3e2b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 250
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_NaziSoldier_0
+      name: movimiento-EjeX_0
       rect:
         serializedVersion: 2
-        x: 109
-        y: 7
-        width: 532
-        height: 908
+        x: 11
+        y: 1
+        width: 28
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 932b8b7c6f9b8574eb8c48a6761c59d7
-      internalID: -2077560238
+      spriteID: afc62a517e43a114883500f6076809ca
+      internalID: -1532391051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_NaziSoldier_1
+      name: movimiento-EjeX_1
       rect:
         serializedVersion: 2
-        x: 778
-        y: 19
-        width: 478
-        height: 908
+        x: 53
+        y: 1
+        width: 26
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 407bc0c00e6385149a166e331c2c2495
-      internalID: 219800008
+      spriteID: 7f7fade4d78425a43b3ef8f42e0b5e8a
+      internalID: 910786187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_NaziSoldier_2
+      name: movimiento-EjeX_2
       rect:
         serializedVersion: 2
-        x: 1428
-        y: 26
-        width: 291
-        height: 891
+        x: 90
+        y: 1
+        width: 29
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,113 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a933470b8687d443b9cd17f69b67e5a
-      internalID: 1933523637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_NaziSoldier_3
-      rect:
-        serializedVersion: 2
-        x: 1967
-        y: 26
-        width: 362
-        height: 920
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 175d56049b1052f49bec4f0c239777cc
-      internalID: 430327323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_NaziSoldier_4
-      rect:
-        serializedVersion: 2
-        x: 2492
-        y: 19
-        width: 518
-        height: 889
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26b7fa8c0db2e5444b0eb365087b5cdc
-      internalID: -1083167458
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_NaziSoldier_5
-      rect:
-        serializedVersion: 2
-        x: 3140
-        y: 21
-        width: 431
-        height: 884
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46c633da6de07d7488064eff454d9c16
-      internalID: 112822398
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_NaziSoldier_6
-      rect:
-        serializedVersion: 2
-        x: 3791
-        y: 19
-        width: 291
-        height: 882
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c1ef95d597feab498731752c3cd7ad1
-      internalID: -462124657
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_NaziSoldier_7
-      rect:
-        serializedVersion: 2
-        x: 4268
-        y: 24
-        width: 419
-        height: 907
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad3d1cc69cba6264ebe21087462ef223
-      internalID: -1044539319
+      spriteID: 3bf5a0168efbb16449188dc01d3346a5
+      internalID: -1844099478
       vertices: []
       indices: 
       edges: []
@@ -295,14 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite_NaziSoldier_0: -2077560238
-      Sprite_NaziSoldier_1: 219800008
-      Sprite_NaziSoldier_2: 1933523637
-      Sprite_NaziSoldier_3: 430327323
-      Sprite_NaziSoldier_4: -1083167458
-      Sprite_NaziSoldier_5: 112822398
-      Sprite_NaziSoldier_6: -462124657
-      Sprite_NaziSoldier_7: -1044539319
+      movimiento-EjeX_0: -1532391051
+      movimiento-EjeX_1: 910786187
+      movimiento-EjeX_2: -1844099478
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
