@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 20430564}
   - component: {fileID: 20430563}
   - component: {fileID: 20430562}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Banqueta (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1405,7 +1405,7 @@ GameObject:
   - component: {fileID: 184975191}
   - component: {fileID: 184975193}
   - component: {fileID: 184975192}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Banqueta (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1868,7 +1868,7 @@ GameObject:
   - component: {fileID: 277020581}
   - component: {fileID: 277020580}
   - component: {fileID: 277020579}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Banqueta (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2432,7 +2432,7 @@ GameObject:
   - component: {fileID: 387607263}
   - component: {fileID: 387607265}
   - component: {fileID: 387607264}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Banqueta (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2811,7 +2811,7 @@ GameObject:
   - component: {fileID: 437997522}
   - component: {fileID: 437997524}
   - component: {fileID: 437997523}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Banqueta (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3006,7 +3006,7 @@ GameObject:
   - component: {fileID: 511092291}
   - component: {fileID: 511092293}
   - component: {fileID: 511092292}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Banqueta (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3912,7 +3912,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618336980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 185.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4199,7 +4199,7 @@ GameObject:
   - component: {fileID: 649233945}
   - component: {fileID: 649233944}
   - component: {fileID: 649233943}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Banqueta (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4328,7 +4328,7 @@ GameObject:
   - component: {fileID: 654169752}
   - component: {fileID: 654169751}
   - component: {fileID: 654169750}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Banqueta (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4633,7 +4633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817961918}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 185.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6097,7 +6097,7 @@ GameObject:
   - component: {fileID: 1131453526}
   - component: {fileID: 1131453528}
   - component: {fileID: 1131453527}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Banqueta (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6751,7 +6751,7 @@ GameObject:
   - component: {fileID: 1229174877}
   - component: {fileID: 1229174876}
   - component: {fileID: 1229174878}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Poste (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6961,7 +6961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1293534660}
   - component: {fileID: 1293534661}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: limite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7374,7 +7374,7 @@ GameObject:
   - component: {fileID: 1373895011}
   - component: {fileID: 1373895013}
   - component: {fileID: 1373895014}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Banqueta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10581,7 +10581,7 @@ GameObject:
   - component: {fileID: 2017338825}
   - component: {fileID: 2017338824}
   - component: {fileID: 2017338823}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Banqueta (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10889,7 +10889,7 @@ GameObject:
   - component: {fileID: 2048599168}
   - component: {fileID: 2048599170}
   - component: {fileID: 2048599169}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Banqueta (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

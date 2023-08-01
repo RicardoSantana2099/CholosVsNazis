@@ -4,36 +4,36 @@ using UnityEngine;
 
 public class VillanoFollow : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    [SerializeField] private Transform player;
+    private Rigidbody2D rb2D;
+    [SerializeField] private float velocidadMovimiento;
+    [SerializeField] private float distancia;
+    [SerializeField] private LayerMask queEsSuelo;
 
-    private bool isFacingRight = true;
-
-    void Update()
+    private void Start()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-        bool isPlayerRight = transform.position.x < player.transform.position.x;
-        Flip(isPlayerRight);
-
+        rb2D = GetComponent<Rigidbody2D>();
     }
 
-    private void Flip(bool isPlayerRight)
+    private void Update()
     {
-        if((isFacingRight && !isPlayerRight)|| (!isFacingRight && isPlayerRight))
+        rb2D.velocity = new Vector2(velocidadMovimiento * transform.right.x, rb2D.velocity.y);
+
+        RaycastHit2D informacionSuelo = Physics2D.Raycast(transform.position, transform.right, distancia, queEsSuelo);
+
+        if(informacionSuelo)
         {
-            isFacingRight = !isFacingRight;
-            Vector3 scale = transform.localScale;
-            scale.x *= -1;
-            transform.localScale = scale;
+            Girar();
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Girar()
     {
-        Player Hector = collision.collider.GetComponent<Player>();
-        if(Hector != null)
-        {
-            Hector.Hit();
-        }
+        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + transform.right * distancia);
     }
 }

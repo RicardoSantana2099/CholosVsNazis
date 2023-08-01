@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3207084526181335228}
   - component: {fileID: 3207084526181335229}
   - component: {fileID: 3207084526181335226}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Perro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,5 +168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4610370a54195243b0e0d426a35ade4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  player: {fileID: 0}
+  velocidadMovimiento: 20
+  distancia: 5
+  queEsSuelo:
+    serializedVersion: 2
+    m_Bits: 8
