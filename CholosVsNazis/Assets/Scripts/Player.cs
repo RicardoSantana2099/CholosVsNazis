@@ -8,8 +8,8 @@ public class Player : MonoBehaviour
     private Animator animator;
     private float Horizontal;
     private bool Grounded;
-    private int Health = 30;
-    [SerializeField] private BarraDeVida barraDeVida;
+    private int Health = 3;
+   
 
     public GameObject BulletPrefab;
     public float Jumpforce;

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 00ee68723da427e41b4bae03146b3e2b
+guid: f8c2f2c26d883074885c13b7e2b60505
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: movimiento-EjeX_0
+      name: Sprite_Princesa_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 1
-        width: 28
-        height: 33
+        x: 154
+        y: 97
+        width: 577
+        height: 495
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afc62a517e43a114883500f6076809ca
-      internalID: -1532391051
+      spriteID: 54071e606b9f9004b9c8b3ea348ab7b2
+      internalID: 1745545555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: movimiento-EjeX_1
+      name: Sprite_Princesa_1
       rect:
         serializedVersion: 2
-        x: 53
-        y: 1
-        width: 26
-        height: 33
+        x: 875
+        y: 112
+        width: 525
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f7fade4d78425a43b3ef8f42e0b5e8a
-      internalID: 910786187
+      spriteID: 341f7e8c7dfb9d749880a6f36addf3d5
+      internalID: 739963523
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: movimiento-EjeX_2
+      name: Sprite_Princesa_2
       rect:
         serializedVersion: 2
-        x: 90
-        y: 1
-        width: 29
-        height: 31
+        x: 1554
+        y: 109
+        width: 517
+        height: 393
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,8 +173,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bf5a0168efbb16449188dc01d3346a5
-      internalID: -1844099478
+      spriteID: 38105b7fdccb4a14390dfe47f423f09c
+      internalID: -2066925710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Princesa_3
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 112
+        width: 527
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef4ee28832604eb48a7909fc2497780b
+      internalID: 1270014935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Princesa_4
+      rect:
+        serializedVersion: 2
+        x: 2931
+        y: 103
+        width: 639
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3723add3685ee4eb58c9858ffe62ca
+      internalID: 1939048945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Princesa_5
+      rect:
+        serializedVersion: 2
+        x: 3714
+        y: 110
+        width: 669
+        height: 457
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a40186451196e419dd63dad94d7a96
+      internalID: -343060034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Princesa_6
+      rect:
+        serializedVersion: 2
+        x: 4435
+        y: 127
+        width: 557
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d97be50e66154a40a7ce954e992434f
+      internalID: -779399152
       vertices: []
       indices: 
       edges: []
@@ -190,9 +274,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      movimiento-EjeX_0: -1532391051
-      movimiento-EjeX_1: 910786187
-      movimiento-EjeX_2: -1844099478
+      Sprite_Princesa_0: 1745545555
+      Sprite_Princesa_1: 739963523
+      Sprite_Princesa_2: -2066925710
+      Sprite_Princesa_3: 1270014935
+      Sprite_Princesa_4: 1939048945
+      Sprite_Princesa_5: -343060034
+      Sprite_Princesa_6: -779399152
+      Sprite_Princesa_7: -2019765510
+      Sprite_Princesa_8: -28337659
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
