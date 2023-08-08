@@ -79,11 +79,11 @@ public class Malvado : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Pared"))
+        if (collision.gameObject.CompareTag("Pared") || collision.gameObject.CompareTag("Enemigo"))
         {
             CambiarDireccion();
         }
-       
+
     }
 
     private void CambiarDireccion()
@@ -110,6 +110,7 @@ public class Malvado : MonoBehaviour
         Destroy(gameObject); // Por ejemplo, aquí simplemente destruimos el objeto
     }
 }
+
 
 
 
