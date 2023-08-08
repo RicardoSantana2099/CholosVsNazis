@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3207084526181335231}
   - component: {fileID: 3207084526181335228}
   - component: {fileID: 3207084526181335229}
-  - component: {fileID: 3207084526181335226}
+  - component: {fileID: 5497484384619216775}
   m_Layer: 6
   m_Name: Perro
   m_TagString: Enemigo
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1745545555, guid: f8c2f2c26d883074885c13b7e2b60505, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -156,7 +156,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1298652, y: 1.338093}
   m_EdgeRadius: 0
---- !u!114 &3207084526181335226
+--- !u!114 &5497484384619216775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,12 +165,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3207084526181335227}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4610370a54195243b0e0d426a35ade4, type: 3}
+  m_Script: {fileID: 11500000, guid: b52e1b74b699e444191dd716605c895f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 20
-  velocidadMovimiento: 20
-  distancia: 5
-  queEsSuelo:
-    serializedVersion: 2
-    m_Bits: 8
+  velocidadMovimiento: 15
