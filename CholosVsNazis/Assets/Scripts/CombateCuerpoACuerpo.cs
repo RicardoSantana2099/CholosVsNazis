@@ -18,15 +18,14 @@ public class CombateCuerpoACuerpo : MonoBehaviour
 
     private void Update()
     {
-        if(tiempoSiguienteAtaque > 0)
+        if (tiempoSiguienteAtaque > 0)
         {
             tiempoSiguienteAtaque -= Time.deltaTime;
         }
-        if(Input.GetButtonDown("Fire1") && tiempoSiguienteAtaque <= 0)
+        if (Input.GetButtonDown("Fire1") && tiempoSiguienteAtaque <= 0)
         {
             Golpe();
             tiempoSiguienteAtaque = tiempoEntreAtaques;
-
         }
     }
 
@@ -38,9 +37,10 @@ public class CombateCuerpoACuerpo : MonoBehaviour
 
         foreach (Collider2D colisionador in objetos)
         {
-            if(colisionador.CompareTag("Enemigo"))
+            if (colisionador.CompareTag("Enemigo"))
             {
-                colisionador.transform.GetComponent<VillanoFollow>().TomarDaño(dañoGolpe);
+                // Eliminar el enemigo con el tag "Enemigo"
+                Destroy(colisionador.gameObject);
             }
         }
     }

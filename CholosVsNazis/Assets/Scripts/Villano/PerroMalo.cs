@@ -9,6 +9,7 @@ public class PerroMalo : MonoBehaviour
     private int direccion = -1; // Iniciar hacia la izquierda
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    public int vida = 1; // Agregar una vida al enemigo
 
     private void Start()
     {
@@ -35,6 +36,14 @@ public class PerroMalo : MonoBehaviour
             Vector3 tempPosition = transform.position;
             transform.position = collision.transform.position;
             collision.transform.position = tempPosition;
+
+            // Reducir la vida del enemigo
+            vida--;
+            if (vida <= 0)
+            {
+                // Destruir el enemigo si su vida llega a cero
+                Destroy(gameObject);
+            }
         }
     }
 }

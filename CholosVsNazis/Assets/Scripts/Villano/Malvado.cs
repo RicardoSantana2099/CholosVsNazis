@@ -9,6 +9,7 @@ public class Malvado : MonoBehaviour
     [SerializeField] private GameObject proyectilPrefab;
     [SerializeField] private Transform puntoDisparo;
     [SerializeField] private float tiempoQuietoDespuesDisparo;
+    [SerializeField] private float vida = 1f; // Agregar vida
 
     private int direccion = 1; // 1 para derecha, -1 para izquierda
     private SpriteRenderer spriteRenderer;
@@ -61,7 +62,7 @@ public class Malvado : MonoBehaviour
             Instantiate(proyectilPrefab, puntoDisparo.position, Quaternion.identity);
             Instantiate(proyectilPrefab, puntoDisparo.position + new Vector3(4f, 0f, 0f), Quaternion.identity); // Disparar segunda bala con diferencia de 4 unidades en el eje X
             Instantiate(proyectilPrefab, puntoDisparo.position + new Vector3(8f, 0f, 0f), Quaternion.identity); // Disparar tercera bala con diferencia de 8 unidades en el eje X
-            
+
             StartCoroutine(TiempoQuieto());
         }
     }
@@ -82,6 +83,10 @@ public class Malvado : MonoBehaviour
         {
             CambiarDireccion();
         }
+        else if (collision.gameObject.CompareTag("Enemigo")) // Nuevo bloque para recibir daño de otros enemigos
+        {
+            TomarDaño(1f); // Llamar a la función para recibir daño
+        }
     }
 
     private void CambiarDireccion()
@@ -91,6 +96,26 @@ public class Malvado : MonoBehaviour
         // Girar hacia la nueva dirección del movimiento
         spriteRenderer.flipX = direccion == 1 ? false : true;
     }
+
+    public void TomarDaño(float cantidad)
+    {
+        vida -= cantidad;
+
+        if (vida <= 0)
+        {
+            Muerte();
+        }
+    }
+
+    private void Muerte()
+    {
+        // Aquí puedes realizar acciones adicionales cuando el enemigo muere
+        Destroy(gameObject); // Por ejemplo, aquí simplemente destruimos el objeto
+    }
 }
+
+
+
+
 
 

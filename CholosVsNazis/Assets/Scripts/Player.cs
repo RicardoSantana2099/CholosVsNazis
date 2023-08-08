@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -9,8 +10,8 @@ public class Player : MonoBehaviour
     private float Horizontal;
     private bool Grounded;
     private int Health = 3;
-    private bool isInvulnerable = false; // Variable de control de invulnerabilidad
-    public float invulnerableDuration = 1.0f; // Duración de la invulnerabilidad en segundos
+    private bool isInvulnerable = false;
+    public float invulnerableDuration = 1.0f;
 
     public GameObject BulletPrefab;
     public float Jumpforce;
@@ -55,27 +56,27 @@ public class Player : MonoBehaviour
 
     public void Hit()
     {
-        if (!isInvulnerable) // Verificar si el jugador es vulnerable
+        if (!isInvulnerable)
         {
             Health -= 1;
             Debug.Log("Recibió daño. Vidas restantes: " + Health);
 
             if (Health <= 0)
             {
-                Destroy(gameObject);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
             else
             {
-                StartCoroutine(InvulnerabilityTimer()); // Activar la invulnerabilidad temporal
+                StartCoroutine(InvulnerabilityTimer());
             }
         }
     }
 
     private IEnumerator InvulnerabilityTimer()
     {
-        isInvulnerable = true; // Hacer que el jugador sea invulnerable
-        yield return new WaitForSeconds(invulnerableDuration); // Esperar por la duración de invulnerabilidad
-        isInvulnerable = false; // Desactivar la invulnerabilidad
+        isInvulnerable = true;
+        yield return new WaitForSeconds(invulnerableDuration);
+        isInvulnerable = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collider)

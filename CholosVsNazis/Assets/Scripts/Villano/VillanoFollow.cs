@@ -88,4 +88,5 @@ public class VillanoFollow : MonoBehaviour
         // Eliminar el objeto después de la animación de muerte
         Destroy(gameObject);
     }
+
 }
