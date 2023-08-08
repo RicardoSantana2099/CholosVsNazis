@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemigo
   - Pared
+  - Bala
   layers:
   - Default
   - TransparentFX
