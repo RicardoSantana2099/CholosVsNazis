@@ -9,10 +9,22 @@ public class Bala : MonoBehaviour
 
     public float tiempoVida = 3f; // Tiempo de vida de la bala
 
+    private GameObject player; // Referencia al jugador
+
     private void Start()
     {
-        // La dirección de la bala es hacia la derecha (eje X)
-        direction = Vector2.right; // Cambia Vector2.right a la dirección deseada
+        player = GameObject.FindGameObjectWithTag("Player"); // Encontrar el jugador
+
+        if (player != null)
+        {
+            // Calcular la dirección hacia el jugador desde la posición de la bala
+            direction = (player.transform.position - transform.position).normalized;
+        }
+        else
+        {
+            // Si no se encuentra el jugador, moverse hacia la derecha por defecto
+            direction = Vector2.right;
+        }
 
         // Iniciar la rutina para destruir la bala después de tiempoVida segundos
         StartCoroutine(DestruirDespuesDeTiempo(tiempoVida));
@@ -20,7 +32,7 @@ public class Bala : MonoBehaviour
 
     private void Update()
     {
-        // Mover la bala en la dirección y velocidad especificadas
+        // Mover la bala en la dirección calculada y a la velocidad especificada
         transform.position += (Vector3)direction * speed * Time.deltaTime;
     }
 

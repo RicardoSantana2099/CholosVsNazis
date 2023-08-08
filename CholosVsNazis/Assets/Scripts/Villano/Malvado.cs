@@ -32,26 +32,24 @@ public class Malvado : MonoBehaviour
 
         transform.Translate(Vector3.right * direccion * velocidadMovimiento * Time.deltaTime);
 
-        // Disparar si está en rango y no ha disparado antes
-        if (!haDisparado && EstaEnRango())
+        // Verificar si el jugador está en línea de visión antes de disparar
+        if (!estaAtacando && PuedeVerJugador())
         {
             Disparar();
         }
     }
 
-    private bool EstaEnRango()
+    private bool PuedeVerJugador()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, rangoDisparo);
+        Vector2 playerDirection = GameObject.FindGameObjectWithTag("Player").transform.position - transform.position;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, playerDirection, 10f); // Distancia de visión de 10 unidades
 
-        foreach (Collider2D collider in colliders)
+        if (hit.collider != null && hit.collider.CompareTag("Player"))
         {
-            if (collider.CompareTag("Player"))
-            {
-                return true;
-            }
+            return true; // El Malvado puede ver al jugador
         }
 
-        return false;
+        return false; // No hay línea de visión clara al jugador
     }
 
     private void Disparar()
@@ -61,6 +59,9 @@ public class Malvado : MonoBehaviour
             animator.SetBool("Ataque", true); // Cambiar el parámetro a true
             estaAtacando = true;
             Instantiate(proyectilPrefab, puntoDisparo.position, Quaternion.identity);
+            Instantiate(proyectilPrefab, puntoDisparo.position + new Vector3(4f, 0f, 0f), Quaternion.identity); // Disparar segunda bala con diferencia de 4 unidades en el eje X
+            Instantiate(proyectilPrefab, puntoDisparo.position + new Vector3(8f, 0f, 0f), Quaternion.identity); // Disparar tercera bala con diferencia de 8 unidades en el eje X
+            
             StartCoroutine(TiempoQuieto());
         }
     }
@@ -88,14 +89,7 @@ public class Malvado : MonoBehaviour
         direccion *= -1; // Cambiar la dirección de movimiento
 
         // Girar hacia la nueva dirección del movimiento
-        if (direccion == 1)
-        {
-            spriteRenderer.flipX = false; // No voltear horizontalmente
-        }
-        else
-        {
-            spriteRenderer.flipX = true; // Voltear horizontalmente
-        }
+        spriteRenderer.flipX = direccion == 1 ? false : true;
     }
 }
 
