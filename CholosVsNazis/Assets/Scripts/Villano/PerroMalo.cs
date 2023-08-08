@@ -38,13 +38,7 @@ public class PerroMalo : MonoBehaviour
             collision.transform.position = tempPosition;
 
             // Reducir la vida del enemigo
-            vida--;
-            if (vida <= 0)
-            {
-                // Destruir el enemigo si su vida llega a cero
-                Destroy(gameObject);
-            }
+           
         }
     }
 }
-

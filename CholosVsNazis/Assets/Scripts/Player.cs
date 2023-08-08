@@ -9,9 +9,11 @@ public class Player : MonoBehaviour
     private Animator animator;
     private float Horizontal;
     private bool Grounded;
-    private int Health = 3;
+    private int Health = 5;
     private bool isInvulnerable = false;
     public float invulnerableDuration = 1.0f;
+
+    [SerializeField]private BarraDeVida barraDeVida;
 
     public GameObject BulletPrefab;
     public float Jumpforce;
@@ -21,6 +23,7 @@ public class Player : MonoBehaviour
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        barraDeVida.InicializarBarraDeVida(Health);
     }
 
     void Update()
@@ -60,6 +63,8 @@ public class Player : MonoBehaviour
         {
             Health -= 1;
             Debug.Log("Recibió daño. Vidas restantes: " + Health);
+
+            barraDeVida.CambiarVidaActual(Health);
 
             if (Health <= 0)
             {

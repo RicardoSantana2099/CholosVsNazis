@@ -6,27 +6,31 @@ using UnityEngine.UI;
 public class BarraDeVida : MonoBehaviour
 {
     private Slider slider;
+    private int vidasMaximas;
 
     private void Start()
     {
         slider = GetComponent<Slider>();
-
     }
 
-    public void CambiarVidaMaxima(float vidaMaxima)
+    public void InicializarBarraDeVida(int cantidadVidas)
     {
-        slider.maxValue = vidaMaxima;
+        vidasMaximas = cantidadVidas;
+        CambiarVidaActual(vidasMaximas);
     }
 
-    public void CambiarVidaActual(float cantidaVida)
+    public void CambiarVidaActual(int cantidaVidas)
     {
-        slider.value = cantidaVida;
+        slider.value = cantidaVidas;
     }
 
-    public void InicializarBarraDeVida(float cantidadVida)
+    public void ReducirVida()
     {
-        CambiarVidaMaxima(cantidadVida);
-        CambiarVidaActual(cantidadVida);
+        if (vidasMaximas > 0)
+        {
+            vidasMaximas--;
+            CambiarVidaActual(vidasMaximas);
+        }
     }
-
 }
+

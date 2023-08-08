@@ -83,10 +83,7 @@ public class Malvado : MonoBehaviour
         {
             CambiarDireccion();
         }
-        else if (collision.gameObject.CompareTag("Enemigo")) // Nuevo bloque para recibir daño de otros enemigos
-        {
-            TomarDaño(1f); // Llamar a la función para recibir daño
-        }
+       
     }
 
     private void CambiarDireccion()
