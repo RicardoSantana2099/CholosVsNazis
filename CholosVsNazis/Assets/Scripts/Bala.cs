@@ -4,22 +4,31 @@ using UnityEngine;
 
 public class Bala : MonoBehaviour
 {
-    public float speed;
-    private Rigidbody2D Rigidbody2D;
-    private Vector2 Direction;
-    void Start()
+    public float speed = 10f; // Velocidad de la bala
+    private Vector2 direction; // Dirección de movimiento
+
+    public float tiempoVida = 3f; // Tiempo de vida de la bala
+
+    private void Start()
     {
-        Rigidbody2D = GetComponent<Rigidbody2D>();
+        // La dirección de la bala es hacia la derecha (eje X)
+        direction = Vector2.right; // Cambia Vector2.right a la dirección deseada
+
+        // Iniciar la rutina para destruir la bala después de tiempoVida segundos
+        StartCoroutine(DestruirDespuesDeTiempo(tiempoVida));
     }
 
-   
-    void FixedUpdate()
+    private void Update()
     {
-        Rigidbody2D.velocity = Direction * speed;
+        // Mover la bala en la dirección y velocidad especificadas
+        transform.position += (Vector3)direction * speed * Time.deltaTime;
     }
 
-    public void SetDirection(Vector2 direction)
+    private IEnumerator DestruirDespuesDeTiempo(float delay)
     {
-        Direction = direction;
+        yield return new WaitForSeconds(delay);
+        Destroy(gameObject); // Destruir la bala después de tiempoVida segundos
     }
 }
+
+

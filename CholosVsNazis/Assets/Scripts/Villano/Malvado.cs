@@ -14,6 +14,7 @@ public class Malvado : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private bool haDisparado = false;
     private bool enTiempoQuieto = false;
+    private bool estaAtacando = false; // Nuevo parámetro para el estado de ataque
     private Animator animator;
 
     private void Start()
@@ -55,10 +56,13 @@ public class Malvado : MonoBehaviour
 
     private void Disparar()
     {
-        animator.SetTrigger("Ataque"); // Activa la animación de disparo
-        Instantiate(proyectilPrefab, puntoDisparo.position, Quaternion.identity);
-        haDisparado = true;
-        StartCoroutine(TiempoQuieto());
+        if (!haDisparado)
+        {
+            animator.SetBool("Ataque", true); // Cambiar el parámetro a true
+            estaAtacando = true;
+            Instantiate(proyectilPrefab, puntoDisparo.position, Quaternion.identity);
+            StartCoroutine(TiempoQuieto());
+        }
     }
 
     private IEnumerator TiempoQuieto()
@@ -67,6 +71,8 @@ public class Malvado : MonoBehaviour
         yield return new WaitForSeconds(tiempoQuietoDespuesDisparo);
         enTiempoQuieto = false;
         CambiarDireccion();
+        animator.SetBool("Ataque", false); // Cambiar el parámetro a false
+        estaAtacando = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
